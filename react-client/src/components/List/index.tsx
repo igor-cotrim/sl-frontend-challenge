@@ -14,6 +14,8 @@ const ListComponent = () => {
         maxWidth: 860,
         borderRadius: 4,
         bgcolor: "background.paper",
+        boxShadow: "8px 12px 12px rgb(0 0 0 / 0.4)",
+        border: "1px solid #6726ff",
       }}
     >
       {users?.map((user) => (
