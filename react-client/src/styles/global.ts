@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 
 export const GlobalStyle = css`
   * {
@@ -15,5 +15,14 @@ export const GlobalStyle = css`
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+`;
+
+export const loadingRing = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 `;

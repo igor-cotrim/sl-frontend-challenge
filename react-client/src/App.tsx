@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 
-import { Content, List } from "./components";
+import { Content, List, Loading } from "./components";
 
 const App = () => (
-  <Suspense fallback={<div>Loading... </div>}>
+  <Suspense fallback={<Loading />}>
     <Content>
       <List />
     </Content>
