@@ -1,8 +1,10 @@
-import { gql, request } from "graphql-request";
-import { useQuery } from "@tanstack/react-query";
+import graphql from 'babel-plugin-relay/macro';
+import { useLazyLoadQuery } from "react-relay";
 
-export const QUERY_USER = gql`
-  query QueryUser {
+import { userQuery } from './__generated__/userQuery.graphql'
+
+export const QUERY_USER = graphql`
+  query userQuery {
     users {
       id
       name
@@ -15,9 +17,7 @@ export const QUERY_USER = gql`
 `;
 
 export function useUsers() {
-  return useQuery(["User"], async () => {
-    const { users } = await request(`${process.env.REACT_APP_API_URL}`, QUERY_USER)
+  const data = useLazyLoadQuery<userQuery>(QUERY_USER, { fetchPolicy: 'store-or-network' });
 
-    return users
-  });
+  return data
 }

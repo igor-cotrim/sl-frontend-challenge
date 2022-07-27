@@ -1,11 +1,11 @@
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 
-import { ListItem } from '../../components'
 import { useUsers } from "../../graphql/queries/user";
+import { ListItem } from '../../components'
 
 const ListComponent = () => {
-  const { status, data, error, isFetching }: any = useUsers();
+  const { users } = useUsers();
 
   return (
     <List
@@ -16,21 +16,12 @@ const ListComponent = () => {
         bgcolor: "background.paper",
       }}
     >
-      {status === "loading" ? (
-        "Loading..."
-      ) : status === "error" ? (
-        <span>Error: {error.message}</span>
-      ) : (
-        <>
-          {data.map((user: any) => (
-            <div key={user.id}>
-              <ListItem user={user} />
-              <Divider variant="inset" component="li" />
-            </div>
-          ))}
-          <div>{isFetching ? "Loading..." : " "}</div>
-        </>
-      )}
+      {users?.map((user) => (
+        <div key={user.id}>
+          <ListItem user={user} />
+          <Divider variant="inset" component="li" />
+        </div>
+      ))}
     </List>
   );
 };
