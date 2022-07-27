@@ -36,7 +36,10 @@
     "test": "node ./setup && react-scripts test",
     "eject": "react-scripts eject",
     "get:schema": "get-graphql-schema http://localhost:4000 > ./src/graphql/schema/schema.graphql --graphql",
-    "relay": "relay-compiler"
+    "relay": "relay-compiler",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "relay": {
     "src": "./src",
