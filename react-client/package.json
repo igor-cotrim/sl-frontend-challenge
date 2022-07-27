@@ -17,18 +17,28 @@
     "framer-motion": "^4",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
+    "isomorphic-fetch": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.32.2",
+    "react-relay": "^14.0.0",
     "react-scripts": "4.0.3",
+    "relay-runtime": "^14.0.0",
     "typescript": "^4.4.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "yarn run relay && react-scripts start",
+    "build": "node ./setup && react-scripts build",
+    "test": "node ./setup && react-scripts test",
+    "eject": "react-scripts eject",
+    "get:schema": "get-graphql-schema http://localhost:4000 > ./src/graphql/schema/schema.graphql --graphql",
+    "relay": "relay-compiler"
+  },
+  "relay": {
+    "src": "./src",
+    "schema": "./src/graphql/schema/schema.graphql",
+    "language": "typescript"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +57,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.36",
+    "@types/react-relay": "^13.0.2",
+    "@types/relay-runtime": "^13.0.3",
+    "babel-plugin-relay": "^14.0.0",
+    "relay-compiler": "^14.0.0",
+    "relay-compiler-language-typescript": "^15.0.1"
   }
 }
