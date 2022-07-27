@@ -2,7 +2,7 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 
 import { useUsers } from "../../graphql/queries/user";
-import { ListItem } from '../../components'
+import { ListItem } from "../../components";
 
 const ListComponent = () => {
   const { users } = useUsers();

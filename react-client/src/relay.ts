@@ -4,7 +4,7 @@ import {
   RecordSource,
   Store,
   RequestParameters,
-  Variables
+  Variables,
 } from "relay-runtime";
 import fetch from "isomorphic-fetch";
 
@@ -19,10 +19,10 @@ function fetchQuery(operation: RequestParameters, variables: Variables) {
       query: operation.text,
       variables,
     }),
-  }).then((response: any) => {
-    return response.json()
-  })
-};
+  }).then((response) => {
+    return response.json();
+  });
+}
 
 const network = Network.create(fetchQuery);
 

@@ -1,15 +1,11 @@
-import * as S from './styled'
+import * as S from "./styled";
 
 type ContentProps = {
-  children: React.ReactChild
-}
+  children: React.ReactChild;
+};
 
 const Content = ({ children }: ContentProps) => {
-  return (
-    <S.Container>
-      {children}
-    </S.Container>
-  )
-}
+  return <S.Container>{children}</S.Container>;
+};
 
-export default Content
+export default Content;

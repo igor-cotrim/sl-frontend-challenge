@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -7,4 +7,4 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   background: #1b1b1b;
-`
+`;

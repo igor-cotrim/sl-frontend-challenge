@@ -1,8 +1,5 @@
 import ReactDOM from "react-dom";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Global } from "@emotion/react";
 import { RelayEnvironmentProvider } from "react-relay";
 
