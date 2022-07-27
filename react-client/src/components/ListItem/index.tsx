@@ -30,6 +30,15 @@ const ListItemComponent = ({ user }: any) => (
           >
             Phone{` - ${user.phone}`}
           </Typography>
+          <br />
+          <Typography
+            sx={{ display: "inline" }}
+            component="span"
+            variant="body2"
+            color="text.primary"
+          >
+            Password{` - ${user.password}`}
+          </Typography>
         </>
       }
     />
