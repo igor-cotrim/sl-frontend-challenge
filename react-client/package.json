@@ -14,6 +14,9 @@
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint-plugin-react": "^7.30.1",
     "framer-motion": "^4",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
@@ -63,6 +66,10 @@
     "@types/react-relay": "^13.0.2",
     "@types/relay-runtime": "^13.0.3",
     "babel-plugin-relay": "^14.0.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
     "relay-compiler": "^14.0.0",
     "relay-compiler-language-typescript": "^15.0.1"
   }
